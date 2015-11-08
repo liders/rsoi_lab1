@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Yandex Money</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="page">
+  <h1>Yandex Money</h1>
+
+  <form action="{{ url_for('request_authorization') }}" method="post" class="add-entry">
+    <dl>
+        <dd><input type="submit" value="Get token">
+        
+    </dl>
+  </form>
+  
+   <form action="{{ url_for('info') }}" method="post" class="add-entry">
+    <dl>
+       <dd><input type="submit" value="Show account info">
+        
+    </dl>
+  </form>
+
+   <form action="{{ url_for('history') }}" method="post" class="add-entry">
+    <dl>
+         <dd><input type="submit" value="Show operation history">
+        
+    </dl>
+  </form>
+
+  
+</div>
