@@ -38,14 +38,12 @@ def request_authorization():
 def info():
 	account_info_json = inform.receive_account_info(access_token=oauth.access_token)
 
-	#print json.dumps(account_info_json, indent=4)
 	return render_template('account_information.html', account_info=json.dumps(account_info_json, indent=4).decode('unicode-escape'))
 
 
 @app.route('/history', methods=['POST'])
 def history():
 	operation_history_json = inform.receive_operation_history(access_token=oauth.access_token)
-	#print(json.dumps(operation_history_json, indent=4))
 	return render_template('account_history.html', operation_history=json.dumps(operation_history_json, indent=4).decode('unicode-escape'))
 
 @app.route('/payment', methods=['POST'])

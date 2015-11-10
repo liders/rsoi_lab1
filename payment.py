@@ -24,7 +24,7 @@ class Payment:
 		"""
 		self.params = {'pattern_id': 'phone-topup',
 						
-						'phone-number': '79166462816',
+						'phone-number': '',
 						'amount': '10.00'}
 		"""
 		print(urlencode(self.params).replace('+', '%20').replace('-', '%2D'))
